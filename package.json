@@ -1,0 +1,17 @@
+{
+  "name": "batch-qiniu",
+  "version": "1.0.0",
+  "description": "upload files to qiniu",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "async": "^1.4.2",
+    "qiniu": "^6.1.8",
+    "ya-csv": "^0.9.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
