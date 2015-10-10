@@ -2,3 +2,5 @@ node_modules/
 .qiniu
 pics.csv
 .DS_Store
+result.json
+err.log
