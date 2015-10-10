@@ -62,7 +62,7 @@ function putFile(data, callback) {
         });
 
         res.on('end', function () {
-            qiniu.io.put(policy, '/school/asset/' + path.basename(imgUrl), Buffer.concat(imgBuffers), null, function (err, ret) {
+            qiniu.io.put(policy, 'school/asset/' + path.basename(imgUrl), Buffer.concat(imgBuffers), null, function (err, ret) {
                 if (!err) {
                     callback(null, {
                         'id': id,
