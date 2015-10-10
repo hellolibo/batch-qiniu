@@ -11,6 +11,7 @@ var async = require('async');
 var PIC_CSV_FILE = "pics.csv";
 var QINIU_CONFIG_FILE = '.qiniu';
 var QINIU_PUT_LIMIT = 10;
+var PREFIX_KEY = 'school/asset/';
 
 var qiniuConfig = JSON.parse(fs.readFileSync(QINIU_CONFIG_FILE, 'utf8'));
 
@@ -62,7 +63,7 @@ function putFile(data, callback) {
         });
 
         res.on('end', function () {
-            qiniu.io.put(policy, 'school/asset/' + path.basename(imgUrl), Buffer.concat(imgBuffers), null, function (err, ret) {
+            qiniu.io.put(policy, PREFIX_KEY + path.basename(imgUrl), Buffer.concat(imgBuffers), null, function (err, ret) {
                 if (!err) {
                     callback(null, {
                         'id': id,
